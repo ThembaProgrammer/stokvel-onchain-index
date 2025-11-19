@@ -15,7 +15,7 @@ import {
   TransferSingle as TransferSingleEvent,
   URI as URIEvent,
   Unpaused as UnpausedEvent
-} from "../generated/stokvel-onchain/stokvel-onchain"
+} from "../generated/stokvel-onchain/stokvel_onchain"
 import {
   ApprovalForAll,
   ApprovedToUseContribution,

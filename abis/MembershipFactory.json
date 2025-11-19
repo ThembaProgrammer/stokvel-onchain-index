@@ -1,0 +1,48 @@
+[
+  { "inputs": [], "name": "InvalidAssetAddress", "type": "error" },
+  { "inputs": [], "name": "InvalidEmailHash", "type": "error" },
+  { "inputs": [], "name": "InvalidStokvelAddress", "type": "error" },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "membership",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "emailHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "MembershipDeployed",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "stokvel", "type": "address" },
+      { "internalType": "address", "name": "asset", "type": "address" },
+      { "internalType": "bytes32", "name": "emailHash", "type": "bytes32" }
+    ],
+    "name": "computeMembershipAddress",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "stokvel", "type": "address" },
+      { "internalType": "address", "name": "asset", "type": "address" },
+      { "internalType": "bytes32", "name": "emailHash", "type": "bytes32" }
+    ],
+    "name": "deployMembership",
+    "outputs": [
+      { "internalType": "address", "name": "membership", "type": "address" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

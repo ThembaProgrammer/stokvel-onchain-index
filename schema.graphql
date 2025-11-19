@@ -152,3 +152,11 @@ type Unpaused @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+type MembershipDeployed @entity(immutable: true) {
+  id: Bytes!
+  membership: Bytes! # address
+  emailHash: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

@@ -3,6 +3,10 @@
     "stokvel-onchain": {
       "address": "0x5F1D75F3A6e3B2eF772721B4957C203750D55Ef3",
       "startBlock": 9655896
+    },
+    "MembershipFactory": {
+      "address": "0xBd48b01f1B4CB5A7Fa329c48Cb2C3e75d8B75444",
+      "startBlock": 9655896
     }
   }
 }

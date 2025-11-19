@@ -56,7 +56,8 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Paused(address)
           handler: handlePaused
-        - event: PermissionGrantedToUseContribution(indexed address,uint256,indexed address,uint256,uint256)
+        - event: PermissionGrantedToUseContribution(indexed address,uint256,indexed
+            address,uint256,uint256)
           handler: handlePermissionGrantedToUseContribution
         - event: QuorumUpdated(uint256,uint256)
           handler: handleQuorumUpdated
@@ -69,3 +70,23 @@ dataSources:
         - event: Unpaused(address)
           handler: handleUnpaused
       file: ./src/stokvel-onchain.ts
+  - kind: ethereum
+    name: MembershipFactory
+    network: sepolia
+    source:
+      address: "0xBd48b01f1B4CB5A7Fa329c48Cb2C3e75d8B75444"
+      abi: MembershipFactory
+      startBlock: 9650596
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.9
+      language: wasm/assemblyscript
+      entities:
+        - MembershipDeployed
+      abis:
+        - name: MembershipFactory
+          file: ./abis/MembershipFactory.json
+      eventHandlers:
+        - event: MembershipDeployed(indexed address,bytes32)
+          handler: handleMembershipDeployed
+      file: ./src/membership-factory.ts
